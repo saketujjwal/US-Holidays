@@ -1,0 +1,13 @@
+<div style="text-align:center">
+<header>holiday list</header>
+	<md-list>
+
+	 <md-list-item *ngFor="let holiday of holidays">
+	 		<a [routerLink]="['/details', 
+	 		{date:holiday.date,
+	 		name:holiday.name,
+	 		observedDate:holiday.observed,
+	 		public:holiday.public}]" > {{holiday.name}}</a>  
+	 </md-list-item>
+	</md-list>
+</div>
